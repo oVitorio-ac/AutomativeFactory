@@ -8,65 +8,14 @@ package automativefactory;
  *
  * @author 0041432213010
  */
-public class Car {
+public class Car extends GroundVehicles {
     
-    private String engineType;
-    private String model;
-    private String Color;
     private int quantyDoor;
-    private int quantywheels;
+    private String windshieldWiper;
 
-    public Car( String model, String engineType, String Color, int quantyDoor, int quantywheels) {
-        this.engineType = engineType;
-        this.model = model;
-        this.Color = Color;
+    public Car(int quantyDoor, String windshieldWiper, String engineType, String colorVehicle, String model, int quantywheels) {
+        super(engineType, colorVehicle, model, quantywheels);
         this.quantyDoor = quantyDoor;
-        this.quantywheels = quantywheels;
+        this.windshieldWiper = windshieldWiper;
     }
-
-    public String getEngineType() {
-        return engineType;
-    }
-
-    public void setEngineType(String engineType) {
-        this.engineType = engineType;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getColor() {
-        return Color;
-    }
-
-    public void setColor(String Color) {
-        this.Color = Color;
-    }
-
-    public int getQuantyDoor() {
-        return quantyDoor;
-    }
-
-    public void setQuantyDoor(int quantyDoor) {
-        this.quantyDoor = quantyDoor;
-    }
-
-    public int getQuantywheels() {
-        return quantywheels;
-    }
-
-    public void setQuantywheels(int quantywheels) {
-        this.quantywheels = quantywheels;
-    }
-
-    @Override
-    public String toString() {
-        return "car ={\n 'Modelo':'" + model + "', \n 'motor':'"+ engineType +"', \n 'Cor':'" + Color + "', \n 'Quantidade de portas':'" + quantyDoor + "', \n 'Quantidade de rodas':'" + quantywheels +"' \n}";
-    }
-    
 }
